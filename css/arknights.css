@@ -3183,7 +3183,7 @@ table .code {
   margin-top: 6px;
   padding-bottom: 2px;
   font-size: 0.82em;
-  color: var(--theme-unimportant);
+  color: #fff;
 }
 .recent-post .recent-info:after {
   display: none;
@@ -3200,7 +3200,7 @@ table .code {
   margin-right: 4px;
   vertical-align: -0.125em;
   flex: none;
-  color: var(--theme-text-light);
+  color: #fff;
 }
 .recent-post .recent-info .date,
 .recent-post .recent-info .read-time,
@@ -3210,6 +3210,35 @@ table .code {
 }
 .recent-post .recent-info .tags a {
   margin-right: 4px;
-  color: var(--theme-highlight);
+  color: #fff;
   text-decoration: none;
+}
+html,
+body,
+body * {
+  font-family: 'Sarasa Gothic SC', '更纱黑体 SC', 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'Noto Sans SC', sans-serif !important;
+}
+i.fa,
+i.fas,
+i.far,
+i.fab,
+i.fal,
+i.fad,
+i[class*=" fa-"],
+i[class^="fa-"] {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands" !important;
+}
+pre,
+code,
+kbd,
+samp,
+pre *,
+code *,
+.highlight,
+.highlight *,
+figure.highlight,
+figure.highlight *,
+figure.highlight table,
+figure.highlight table * {
+  font-family: 'JetBrains Mono', 'Sarasa Gothic SC', monospace !important;
 }
