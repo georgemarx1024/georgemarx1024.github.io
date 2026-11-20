@@ -3178,3 +3178,38 @@ table .code {
   height: 100%;
   position: relative;
 }
+.recent-post .recent-info {
+  min-height: unset;
+  margin-top: 6px;
+  padding-bottom: 2px;
+  font-size: 0.82em;
+  color: var(--theme-unimportant);
+}
+.recent-post .recent-info:after {
+  display: none;
+}
+.recent-post .recent-info span {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 16px;
+  vertical-align: middle;
+}
+.recent-post .recent-info svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 4px;
+  vertical-align: -0.125em;
+  flex: none;
+  color: var(--theme-text-light);
+}
+.recent-post .recent-info .date,
+.recent-post .recent-info .read-time,
+.recent-post .recent-info .lang,
+.recent-post .recent-info .tags {
+  font-family: 'JetBrains Mono', 'Microsoft YaHei', sans-serif;
+}
+.recent-post .recent-info .tags a {
+  margin-right: 4px;
+  color: var(--theme-highlight);
+  text-decoration: none;
+}
