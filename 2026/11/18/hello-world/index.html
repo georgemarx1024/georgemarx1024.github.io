@@ -196,6 +196,15 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
       graceTimer = null;
     }
     if (!raf) raf = window.requestAnimationFrame(tick);
+    // 兜底：标签页在后台等情况下 rAF 会被节流，直接补满并淡出
+    setTimeout(function () {
+      if (gone || !pageLoaded) return;
+      if (shown < 100) {
+        shown = target = 100;
+        render();
+      }
+      fade();
+    }, 1400);
   }
 
   render();
