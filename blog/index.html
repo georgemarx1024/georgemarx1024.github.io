@@ -1,4 +1,17 @@
-<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>巴别塔里的文字花圃</title><meta name="description" content="生命自会找到出路">
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><script>(function () {
+  try {
+    var KEY = 'ak-entrance-seen';
+    var TTL = 30 * 60 * 1000; // 30 分钟内再次访问不再播放（改成 0 表示每个新标签页都播放）
+    var last = parseInt(window.localStorage.getItem(KEY) || '0', 10) || 0;
+    if (!last || Date.now() - last > TTL) {
+      document.documentElement.className += ' ak-entrance';
+      window.localStorage.setItem(KEY, String(Date.now()));
+    }
+  } catch (e) {
+    // 隐私模式等无法读写 localStorage 时，仍然播放一次
+    document.documentElement.className += ' ak-entrance';
+  }
+})();</script><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>巴别塔里的文字花圃</title><meta name="description" content="生命自会找到出路">
 <meta property="og:type" content="website">
 <meta property="og:title" content="巴别塔里的文字花圃">
 <meta property="og:url" content="https://georgemarx1024.github.io/blog/index.html">
@@ -87,6 +100,11 @@ if (postBg) lightGallery(postBg, {
 document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="ak-loading"><div class="ak-loading-deco" aria-hidden="true"><i class="ak-loading-line ak-loading-line-h"></i><i class="ak-loading-line ak-loading-line-v"></i></div><div class="ak-loading-logo"><img src="/img/title_logo.png" alt="巴别塔里的文字花圃"></div><div class="ak-loading-foot"><div class="ak-loading-copy"><span class="ak-loading-copyleft" aria-hidden="true">©</span><span class="ak-loading-owner">MOHISTMAN</span></div><div class="ak-loading-bar"><i class="ak-loading-bar-cap"></i><span class="ak-loading-bar-track"><i class="ak-loading-bar-fill"></i></span><i class="ak-loading-bar-cap"></i></div><div class="ak-loading-meta"><span class="ak-loading-num">LOADING - 0%</span><span class="ak-loading-url">https://georgemarx1024.github.io</span></div></div></div><script>(function () {
   var el = document.querySelector('.ak-loading');
   if (!el) return;
+  // 非首次进入网站：不播放入场动画（CSS 也已隐藏，这里直接移除）
+  if (!document.documentElement.classList.contains('ak-entrance')) {
+    if (el.parentNode) el.parentNode.removeChild(el);
+    return;
+  }
   var fill = el.querySelector('.ak-loading-bar-fill');
   var num = el.querySelector('.ak-loading-num');
 
