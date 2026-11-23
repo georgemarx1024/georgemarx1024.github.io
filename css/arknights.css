@@ -3454,3 +3454,72 @@ aside {
   padding: 12px 18px;
   color: #666;
 }
+.ak-loading {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background: #0b0d0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s;
+}
+.ak-loading.done {
+  opacity: 0;
+  pointer-events: none;
+}
+.ak-loading .ak-loading-logo img {
+  display: block;
+  height: 5rem;
+  width: auto;
+  max-width: 70vw;
+}
+.ak-loading .ak-loading-foot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.5rem 2.5rem 1.75rem;
+}
+.ak-loading .ak-loading-copy {
+  color: #9aa0a6;
+  font-family: 'Sarasa Gothic SC', 'Microsoft YaHei', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.8rem;
+}
+.ak-loading .ak-loading-copyleft {
+  display: inline-block;
+  transform: scaleX(-1);
+  margin-right: 0.25rem;
+  font-size: 1.1rem;
+  color: #c4c2c2;
+}
+.ak-loading .ak-loading-bar {
+  height: 2px;
+  background: rgba(255,255,255,0.18);
+}
+.ak-loading .ak-loading-bar .ak-loading-bar-fill {
+  height: 100%;
+  width: 0;
+  background: #19d1ff;
+}
+.ak-loading .ak-loading-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  color: #c4c2c2;
+  font-family: 'JetBrains Mono', 'Sarasa Gothic SC', monospace;
+  font-size: 0.8rem;
+}
+.ak-loading .ak-loading-meta .ak-loading-url {
+  color: #6b7076;
+}
+@media (max-width: 768px) {
+  .ak-loading .ak-loading-logo img {
+    height: 3.5rem;
+  }
+  .ak-loading .ak-loading-foot {
+    padding: 1rem 1.25rem 1.25rem;
+  }
+}
