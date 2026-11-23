@@ -911,7 +911,7 @@ h6 {
   }
   .navBlock {
     position: relative;
-    padding: 2.142857142857143em 0;
+    padding: 1.764705882352941em 0;
   }
   .navItemTitle {
     color: var(--theme-text-light);
@@ -3398,6 +3398,66 @@ aside {
   }
   .ak-header .ak-logo img {
     height: 2.6rem;
+  }
+}
+@media (max-width: 1280px) {
+  .ak-header .ak-logo img {
+    max-width: 15rem;
+  }
+  .ak-header .ak-nav .ak-nav-item {
+    margin: 0 1.5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .ak-header .ak-logo img {
+    max-width: 11rem;
+  }
+  .ak-header .ak-nav .ak-nav-item {
+    margin: 0 1rem;
+  }
+  .ak-header .ak-nav .ak-nav-item .ak-nav-en {
+    font-size: 1.1rem;
+  }
+  .ak-header .ak-nav .ak-nav-item .ak-nav-cn {
+    font-size: 0.75rem;
+  }
+  .ak-header .ak-actions {
+    width: 13rem;
+  }
+}
+@media (max-width: 768px) {
+  .ak-header .ak-logo {
+    margin-left: 1rem;
+  }
+  .ak-header .ak-logo img {
+    max-width: 8rem;
+  }
+  .ak-header .ak-nav {
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .ak-header .ak-nav::-webkit-scrollbar {
+    height: 0;
+    display: none;
+  }
+  .ak-header .ak-nav .ak-nav-item {
+    flex: none;
+    margin: 0 0.8rem;
+  }
+  .ak-header .ak-nav .ak-nav-item .ak-nav-en {
+    font-size: 0.95rem;
+  }
+  .ak-header .ak-nav .ak-nav-item .ak-nav-cn {
+    font-size: 0.68rem;
+  }
+  .ak-header .ak-actions {
+    flex: none;
+    width: 10rem;
+  }
+  .ak-header .ak-actions .ak-btn svg {
+    height: 1.6rem;
   }
 }
 .ak-search-popup {
