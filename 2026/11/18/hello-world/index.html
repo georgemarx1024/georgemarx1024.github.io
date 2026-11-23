@@ -81,26 +81,155 @@ if (postBg) lightGallery(postBg, {
    }
  }
 });
-document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="ak-loading"><div class="ak-loading-logo"><img src="/img/title_logo.png" alt="巴别塔里的文字花圃"></div><div class="ak-loading-foot"><div class="ak-loading-copy"><span class="ak-loading-copyleft">©</span>MOHISTMAN</div><div class="ak-loading-bar"><div class="ak-loading-bar-fill"></div></div><div class="ak-loading-meta"><span class="ak-loading-num">00</span><span class="ak-loading-url">https://georgemarx1024.github.io/</span></div></div></div><script>(function () {
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="ak-loading"><div class="ak-loading-deco" aria-hidden="true"><i class="ak-loading-line ak-loading-line-h"></i><i class="ak-loading-line ak-loading-line-v"></i></div><div class="ak-loading-logo"><img src="/img/title_logo.png" alt="巴别塔里的文字花圃"></div><div class="ak-loading-foot"><div class="ak-loading-copy"><span class="ak-loading-copyleft" aria-hidden="true">©</span><span class="ak-loading-owner">MOHISTMAN</span></div><div class="ak-loading-bar"><i class="ak-loading-bar-cap"></i><span class="ak-loading-bar-track"><i class="ak-loading-bar-fill"></i></span><i class="ak-loading-bar-cap"></i></div><div class="ak-loading-meta"><span class="ak-loading-num">LOADING - 0%</span><span class="ak-loading-url">https://georgemarx1024.github.io</span></div></div></div><script>(function () {
   var el = document.querySelector('.ak-loading');
   if (!el) return;
   var fill = el.querySelector('.ak-loading-bar-fill');
   var num = el.querySelector('.ak-loading-num');
-  var p = 0;
-  var timer = setInterval(function () {
-    p += 3 + Math.random() * 7;   // 随机步进，模拟加载
-    if (p >= 100) {
-      p = 100;
-      clearInterval(timer);
-      setTimeout(function () {
-        el.classList.add('done');
-        setTimeout(function () { el.remove(); }, 700);
-      }, 280);
+
+  // ===== 真实进度模型 =====
+  // 0%        —— 文档正在解析
+  // 25%       —— DOM 解析完成（DOMContentLoaded）
+  // 25%~99.5% —— 页面真实子资源（非懒加载图片、字体）的真实完成比例
+  // 100%      —— window.load 触发（图片、样式、脚本全部就绪）
+  // 显示值只会缓动逼近真实值，绝不会凭空上涨，也不会超过真实进度。
+  var raf = null;
+  var shown = 0;
+  var target = 0;
+  var pageLoaded = false;
+  var gone = false;
+  var imgs = [];
+  var fontsDone = false;
+  var allDoneAt = 0;
+  var graceTimer = null;
+
+  function render() {
+    var v = Math.round(shown);
+    fill.style.width = shown.toFixed(2) + '%';
+    num.textContent = 'LOADING - ' + v + '%';
+  }
+
+  function fade() {
+    if (gone) return;
+    gone = true;
+    el.classList.add('done');
+    setTimeout(function () {
+      if (el.parentNode) el.parentNode.removeChild(el);
+    }, 700);
+  }
+
+  function tick() {
+    raf = null;
+    if (gone) return;
+    if (shown < target) {
+      shown += (target - shown) * 0.18;
+      if (target - shown < 0.2) shown = target;
+      render();
     }
-    fill.style.width = p + '%';
-    num.textContent = String(Math.floor(p)).padStart(2, '0');
-  }, 50);
-})();</script><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">BLOG 博客</span></a></li><li class="navItem"><a class="navBlock" href="/projects"><span class="navItemTitle">PROJECTS 项目</span></a></li><li class="navItem"><a class="navBlock" href="/links"><span class="navItemTitle">LINKS 友链</span></a></li><li class="navItem"><a class="navBlock" href="/about"><span class="navItemTitle">ABOUT 关于</span></a></li></ol></nav></header><div class="ak-header"><a class="ak-logo" href="/"><img src="/img/title_logo.png" alt="巴别塔里的文字花圃"></a><div class="ak-nav"><a class="ak-nav-item" href="/" data-path="/"><span class="ak-nav-en">BLOG</span><span class="ak-nav-cn">博客</span></a><a class="ak-nav-item" href="/projects" data-path="/projects"><span class="ak-nav-en">PROJECTS</span><span class="ak-nav-cn">项目</span></a><a class="ak-nav-item" href="/links" data-path="/links"><span class="ak-nav-en">LINKS</span><span class="ak-nav-cn">友链</span></a><a class="ak-nav-item" href="/about" data-path="/about"><span class="ak-nav-en">ABOUT</span><span class="ak-nav-cn">关于</span></a></div><div class="ak-actions"><button class="ak-btn" id="ak-search" type="button" title="搜索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21l-4.486-4.494M19 10.5a8.5 8.5 0 1 1-17 0a8.5 8.5 0 0 1 17 0Z"></path></svg></button><button class="ak-btn" id="ak-share" type="button" title="复制本站链接"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 35"><path fill="currentColor" fill-rule="evenodd" d="M19.281 10.017L6.058 22.967.48 17.506l5.578-5.461 2.789 2.73 7.648-7.485-1.397-1.367L20.677.461l5.58 5.462-5.58 5.461-1.396-1.367zm-4.863 10.217l4.863 4.761 1.396-1.367 5.58 5.461-5.58 5.462-5.579-5.462 1.397-1.366-4.863-4.761 2.786-2.728z"></path></svg></button><button class="ak-btn" id="ak-bgm" type="button" title="背景音乐开关"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 34"><path fill="currentColor" d="M25.998 23.422V11.29h3.999v12.132h-3.999zM19.497 6.234h4.001v22.243h-4.001V6.234zM12.998.867h4v32.978h-4V.867zm-6.5 5.367h4.001v22.243H6.498V6.234zm-6.5 5.056h4v12.132h-4V11.29z"></path></svg></button><button class="ak-btn" id="color-mode" type="button" title="明暗切换"><span id="ak-mode-icon" aria-hidden="true"></span></button></div></div><div class="ak-search-popup" tabindex="-1"><div class="ak-search-box"><input id="ak-search-input" type="text" placeholder="搜索文章…" autocomplete="off"><ul id="ak-search-results"></ul></div></div><script>(function () {
+    if (shown < target) {
+      raf = window.requestAnimationFrame(tick);
+    } else if (pageLoaded && shown >= 100) {
+      setTimeout(fade, 240);
+    }
+  }
+
+  function step(p) {
+    if (gone || pageLoaded) return;
+    p = Math.min(99.5, Math.max(0, p));
+    if (p > target) {
+      target = p;
+      if (!raf) raf = window.requestAnimationFrame(tick);
+    }
+  }
+
+  function sync() {
+    if (gone || pageLoaded) return;
+    var done = 0;
+    var total = imgs.length + 1; // +1 = 字体
+    for (var i = 0; i < imgs.length; i++) {
+      if (imgs[i].complete) done++;
+    }
+    if (fontsDone) done++;
+    step(25 + 70 * (done / total));
+    // 本页被跟踪的资源全部就绪后开始计时：第三方资源（外链图片、CDN 等）
+    // 长时间不返回时也不再让遮罩卡住页面
+    allDoneAt = done >= total ? (allDoneAt || Date.now()) : 0;
+  }
+
+  function collect() {
+    var all = document.images || [];
+    for (var i = 0; i < all.length; i++) {
+      var im = all[i];
+      if (im.getAttribute('loading') === 'lazy') continue; // 懒加载不参与首屏进度
+      if (!im.getAttribute('src')) continue;
+      imgs.push(im);
+      if (!im.complete) {
+        im.addEventListener('load', sync);
+        im.addEventListener('error', sync);
+      }
+    }
+    if (document.fonts && document.fonts.ready && document.fonts.ready.then) {
+      document.fonts.ready.then(function () {
+        fontsDone = true;
+        sync();
+      }, function () {
+        fontsDone = true;
+        sync();
+      });
+    } else {
+      fontsDone = true;
+    }
+    sync();
+  }
+
+  function finish() {
+    if (gone || pageLoaded) return;
+    pageLoaded = true;
+    target = 100;
+    if (graceTimer) {
+      clearInterval(graceTimer);
+      graceTimer = null;
+    }
+    if (!raf) raf = window.requestAnimationFrame(tick);
+  }
+
+  render();
+
+  // 页面在脚本执行前就已加载完毕（缓存 / 回退缓存）
+  if (document.readyState === 'complete') {
+    shown = target = 100;
+    render();
+    setTimeout(fade, 200);
+    return;
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      step(25);
+      collect();
+    });
+  } else {
+    step(25);
+    collect();
+  }
+
+  window.addEventListener('load', finish);
+  window.addEventListener('pageshow', function (e) {
+    if (e.persisted) finish();
+  });
+  // 本页资源已就绪但 window.load 迟迟不触发（多因外链资源卡住）时的兜底
+  graceTimer = setInterval(function () {
+    if (gone || pageLoaded) {
+      clearInterval(graceTimer);
+      graceTimer = null;
+      return;
+    }
+    if (allDoneAt && Date.now() - allDoneAt > 2000) finish();
+  }, 400);
+  // 最终兜底：无论如何不让遮罩超过 12 秒
+  setTimeout(finish, 12000);
+})();
+</script><noscript><style>.ak-loading { display: none !important; }</style></noscript><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">BLOG 博客</span></a></li><li class="navItem"><a class="navBlock" href="/projects"><span class="navItemTitle">PROJECTS 项目</span></a></li><li class="navItem"><a class="navBlock" href="/links"><span class="navItemTitle">LINKS 友链</span></a></li><li class="navItem"><a class="navBlock" href="/about"><span class="navItemTitle">ABOUT 关于</span></a></li></ol></nav></header><div class="ak-header"><a class="ak-logo" href="/"><img src="/img/title_logo.png" alt="巴别塔里的文字花圃"></a><div class="ak-nav"><a class="ak-nav-item" href="/" data-path="/"><span class="ak-nav-en">BLOG</span><span class="ak-nav-cn">博客</span></a><a class="ak-nav-item" href="/projects" data-path="/projects"><span class="ak-nav-en">PROJECTS</span><span class="ak-nav-cn">项目</span></a><a class="ak-nav-item" href="/links" data-path="/links"><span class="ak-nav-en">LINKS</span><span class="ak-nav-cn">友链</span></a><a class="ak-nav-item" href="/about" data-path="/about"><span class="ak-nav-en">ABOUT</span><span class="ak-nav-cn">关于</span></a></div><div class="ak-actions"><button class="ak-btn" id="ak-search" type="button" title="搜索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21l-4.486-4.494M19 10.5a8.5 8.5 0 1 1-17 0a8.5 8.5 0 0 1 17 0Z"></path></svg></button><button class="ak-btn" id="ak-share" type="button" title="复制本站链接"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 35"><path fill="currentColor" fill-rule="evenodd" d="M19.281 10.017L6.058 22.967.48 17.506l5.578-5.461 2.789 2.73 7.648-7.485-1.397-1.367L20.677.461l5.58 5.462-5.58 5.461-1.396-1.367zm-4.863 10.217l4.863 4.761 1.396-1.367 5.58 5.461-5.58 5.462-5.579-5.462 1.397-1.366-4.863-4.761 2.786-2.728z"></path></svg></button><button class="ak-btn" id="ak-bgm" type="button" title="背景音乐开关"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 34"><path fill="currentColor" d="M25.998 23.422V11.29h3.999v12.132h-3.999zM19.497 6.234h4.001v22.243h-4.001V6.234zM12.998.867h4v32.978h-4V.867zm-6.5 5.367h4.001v22.243H6.498V6.234zm-6.5 5.056h4v12.132h-4V11.29z"></path></svg></button><button class="ak-btn" id="color-mode" type="button" title="明暗切换"><span id="ak-mode-icon" aria-hidden="true"></span></button></div></div><div class="ak-search-popup" tabindex="-1"><div class="ak-search-box"><input id="ak-search-input" type="text" placeholder="搜索文章…" autocomplete="off"><ul id="ak-search-results"></ul></div></div><script>(function () {
   function rootPath() { return (window.config && window.config.root) ? window.config.root : '/'; }
   function init() {
     // —— 分享：复制链接 ——

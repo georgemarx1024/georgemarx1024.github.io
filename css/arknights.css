@@ -3458,68 +3458,182 @@ aside {
   position: fixed;
   inset: 0;
   z-index: 9998;
-  background: #0b0d0f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.6s;
+  overflow: hidden;
+  background: #272727;
+  color: #a4a4a4;
+  font-family: 'Sarasa Gothic SC', 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif;
+  transition: opacity 0.55s ease;
 }
 .ak-loading.done {
   opacity: 0;
   pointer-events: none;
 }
+.ak-loading .ak-loading-deco {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.ak-loading .ak-loading-deco .ak-loading-line {
+  position: absolute;
+  display: block;
+  background: rgba(255,255,255,0.3);
+}
+.ak-loading .ak-loading-deco .ak-loading-line-h {
+  left: 0;
+  right: 0;
+  top: 10.1%;
+  height: 1px;
+}
+.ak-loading .ak-loading-deco .ak-loading-line-v {
+  top: 0;
+  bottom: 0;
+  left: 95.1%;
+  width: 1px;
+}
+.ak-loading .ak-loading-logo {
+  position: absolute;
+  left: 50%;
+  top: 39.2%;
+  transform: translate(-50%, -50%);
+}
 .ak-loading .ak-loading-logo img {
   display: block;
-  height: 5rem;
-  width: auto;
+  max-height: clamp(56px, 15.6vh, 200px);
   max-width: 70vw;
 }
 .ak-loading .ak-loading-foot {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 1.5rem 2.5rem 1.75rem;
+  left: 13.9%;
+  right: 13.9%;
+  bottom: 21.3%;
+  display: grid;
+  grid-template-columns: 29.5% 70.5%;
+  grid-template-rows: auto auto;
+  align-items: end;
+  row-gap: clamp(6px, 1.39vh, 18px);
 }
 .ak-loading .ak-loading-copy {
-  color: #9aa0a6;
-  font-family: 'Sarasa Gothic SC', 'Microsoft YaHei', sans-serif;
-  font-size: 0.95rem;
-  letter-spacing: 0.08em;
-  margin-bottom: 0.8rem;
+  grid-column: 1;
+  grid-row: 2;
+  align-self: end;
+  font-family: Bender, BenderLight, 'Sarasa Gothic SC', 'Microsoft YaHei', sans-serif !important;
+  font-size: clamp(12px, 1.13vw, 29px);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #a4a4a4;
 }
 .ak-loading .ak-loading-copyleft {
   display: inline-block;
   transform: scaleX(-1);
-  margin-right: 0.25rem;
-  font-size: 1.1rem;
-  color: #c4c2c2;
+  margin-right: 0.3em;
+  font-size: 0.86em;
+  vertical-align: baseline;
+  color: #a4a4a4;
 }
 .ak-loading .ak-loading-bar {
-  height: 2px;
-  background: rgba(255,255,255,0.18);
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  align-items: stretch;
+  height: clamp(3px, 0.27vw, 7px);
 }
-.ak-loading .ak-loading-bar .ak-loading-bar-fill {
-  height: 100%;
+.ak-loading .ak-loading-bar .ak-loading-bar-cap {
+  display: block;
+  flex: 0 0 auto;
+  width: clamp(3px, 0.27vw, 7px);
+  background: #a4a4a4;
+}
+.ak-loading .ak-loading-bar .ak-loading-bar-track {
+  position: relative;
+  display: block;
+  flex: 1 1 auto;
+  align-self: center;
+  height: 50%;
+  background: #a4a4a4;
+}
+.ak-loading .ak-loading-bar .ak-loading-bar-track .ak-loading-bar-fill {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 200%;
   width: 0;
-  background: #19d1ff;
+  background: #18d1ff;
+  transform: translateY(-50%);
 }
 .ak-loading .ak-loading-meta {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: end;
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
-  margin-top: 0.5rem;
-  color: #c4c2c2;
-  font-family: 'JetBrains Mono', 'Sarasa Gothic SC', monospace;
-  font-size: 0.8rem;
+  column-gap: 1rem;
+}
+.ak-loading .ak-loading-meta .ak-loading-num {
+  font-family: Bender, BenderLight, 'Sarasa Gothic SC', 'Microsoft YaHei', sans-serif !important;
+  font-size: clamp(11px, 0.78vw, 20px);
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  color: #a4a4a4;
+}
+.ak-loading .ak-loading-meta .ak-loading-num:before {
+  content: '';
+  display: inline-block;
+  width: 0.35em;
+  height: 0.35em;
+  margin-right: 0.95em;
+  background: #a4a4a4;
+  transform: rotate(45deg);
+  vertical-align: 0.15em;
 }
 .ak-loading .ak-loading-meta .ak-loading-url {
-  color: #6b7076;
+  font-family: Bender, BenderLight, 'Sarasa Gothic SC', 'Microsoft YaHei', sans-serif !important;
+  font-size: clamp(9px, 0.59vw, 15px);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-align: right;
+  color: #a4a4a4;
 }
 @media (max-width: 768px) {
   .ak-loading .ak-loading-logo img {
-    height: 3.5rem;
+    max-height: 11vh;
+    max-width: 78vw;
+  }
+  .ak-loading .ak-loading-deco .ak-loading-line-v {
+    left: 92%;
   }
   .ak-loading .ak-loading-foot {
-    padding: 1rem 1.25rem 1.25rem;
+    left: 8%;
+    right: 8%;
+    bottom: 14%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    row-gap: 0.55rem;
+  }
+  .ak-loading .ak-loading-foot .ak-loading-copy {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 0.95rem;
+  }
+  .ak-loading .ak-loading-foot .ak-loading-bar {
+    grid-column: 1;
+    grid-row: 2;
+    height: 3px;
+  }
+  .ak-loading .ak-loading-foot .ak-loading-meta {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .ak-loading .ak-loading-foot .ak-loading-meta .ak-loading-num {
+    font-size: 0.78rem;
+  }
+  .ak-loading .ak-loading-foot .ak-loading-meta .ak-loading-url {
+    font-size: 0.68rem;
   }
 }
