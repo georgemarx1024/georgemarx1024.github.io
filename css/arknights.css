@@ -3306,11 +3306,12 @@ figure.highlight table * {
   outline: none;
 }
 .ak-header .ak-nav .ak-nav-item .ak-nav-en {
-  font-family: 'Oswald', 'Sarasa Gothic SC', sans-serif;
+  font-family: 'Oswald-Medium', 'Oswald', Bender, 'Sarasa Gothic SC', sans-serif !important;
   font-size: 1.375rem;
   line-height: 1.3;
-  letter-spacing: 0.05em;
-  font-weight: bold;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  font-synthesis: none;
   background: transparent;
 }
 .ak-header .ak-nav .ak-nav-item .ak-nav-cn {
@@ -3414,9 +3415,6 @@ aside {
   }
   .ak-header .ak-nav .ak-nav-item {
     margin: 0 1rem;
-  }
-  .ak-header .ak-nav .ak-nav-item .ak-nav-en {
-    font-size: 1.1rem;
   }
   .ak-header .ak-nav .ak-nav-item .ak-nav-cn {
     font-size: 0.75rem;
