@@ -3213,6 +3213,21 @@ table .code {
   color: #fff;
   text-decoration: none;
 }
+a:active,
+a:hover:active,
+:is(strong,
+em) > a:active {
+  background-color: transparent;
+}
+.ak-nav-item,
+header .navItemTitle,
+.ak-home-label-link,
+.ak-home-meta-item,
+.ak-home-social,
+.ak-home-post {
+  user-select: none;
+  -webkit-user-select: none;
+}
 html,
 body,
 body * {
@@ -3297,13 +3312,14 @@ figure.highlight table * {
   outline: none;
 }
 .ak-header .ak-nav .ak-nav-item:hover,
-.ak-header .ak-nav .ak-nav-item:active,
-.ak-header .ak-nav .ak-nav-item:focus,
-.ak-header .ak-nav .ak-nav-item:focus-visible,
 .ak-header .ak-nav .ak-nav-item.ak-active {
   color: #19d1ff;
   background: transparent;
   outline: none;
+}
+.ak-header .ak-nav .ak-nav-item:focus-visible {
+  outline: 1px solid rgba(25,209,255,0.75);
+  outline-offset: 4px;
 }
 .ak-header .ak-nav .ak-nav-item .ak-nav-en {
   font-family: 'Oswald-Medium', 'Oswald', Bender, 'Sarasa Gothic SC', sans-serif !important;
