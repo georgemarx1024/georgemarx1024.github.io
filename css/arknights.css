@@ -3949,9 +3949,15 @@ body.ak-home-page aside {
   min-width: 0;
   line-height: 1.6;
 }
+.ak-home .ak-home-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+}
 .ak-home .ak-home-cp {
   display: inline-flex;
   align-items: center;
+  margin-right: 0;
   font-size: 1.1em;
   line-height: 1;
   color: var(--theme-text);
