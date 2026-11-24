@@ -3931,7 +3931,8 @@ body.ak-home-page aside {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.5rem;
   width: 100%;
   max-width: 54.25rem;
   margin: 3.5rem auto 0;
@@ -3940,23 +3941,90 @@ body.ak-home-page aside {
   font-size: 0.8rem;
   color: var(--theme-unimportant);
 }
-.ak-home .ak-home-footer .l,
-.ak-home .ak-home-footer .r {
+.ak-home .ak-home-footer-l {
   display: inline-flex;
-  align-items: baseline;
-  gap: 0.5rem;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 0.45rem 0.85rem;
+  min-width: 0;
+  line-height: 1.6;
 }
-.ak-home .ak-home-footer .dot {
-  opacity: 0.5;
+.ak-home .ak-home-cp {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.1em;
+  line-height: 1;
+  color: var(--theme-text);
 }
-.ak-home .ak-home-footer a {
+.ak-home .ak-home-cp svg {
+  display: block;
+}
+.ak-home .ak-home-copy {
+  color: var(--theme-text);
+  white-space: nowrap;
+}
+.ak-home .ak-home-powered {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.ak-home .ak-home-power {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
   color: var(--theme-text);
   transition: color 0.25s;
 }
-.ak-home .ak-home-footer a:hover {
+.ak-home .ak-home-power svg {
+  display: block;
+  width: 1.05em;
+  height: 1.05em;
+  opacity: 0.85;
+  transition: opacity 0.25s;
+}
+.ak-home .ak-home-power:hover {
   color: #19d1ff;
   background-color: transparent;
+}
+.ak-home .ak-home-power:hover svg {
+  opacity: 1;
+}
+.ak-home .ak-home-footer-r {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+.ak-home .ak-home-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.375rem;
+  line-height: 1;
+  color: var(--theme-unimportant);
+  transition: color 0.25s, transform 0.25s;
+}
+.ak-home .ak-home-social svg {
+  display: block;
+  flex: none;
+  width: 1em;
+  height: 1em;
+}
+.ak-home .ak-home-social:hover {
+  background-color: transparent;
+  transform: translateY(-2px);
+}
+.ak-home .ak-home-social.is-github:hover {
+  color: #19d1ff;
+}
+.ak-home .ak-home-social.is-telegram:hover {
+  color: #2aabee;
+}
+.ak-home .ak-home-social.is-bilibili:hover {
+  color: #fb7299;
+}
+.ak-home .ak-home-social.is-coolapk:hover {
+  color: #11a862;
 }
 @media (max-width: 768px) {
   .ak-home {
@@ -4014,5 +4082,8 @@ body.ak-home-page aside {
     flex-direction: column;
     align-items: flex-start;
     margin-top: 2.5rem;
+  }
+  .ak-home .ak-home-footer-l {
+    gap: 0.35rem 0.6rem;
   }
 }
