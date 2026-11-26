@@ -1,0 +1,398 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><script>(function () {
+  try {
+    var KEY = 'ak-entrance-seen';
+    var TTL = 30 * 60 * 1000; // 30 分钟内再次访问不再播放（改成 0 表示每个新标签页都播放）
+    var last = parseInt(window.localStorage.getItem(KEY) || '0', 10) || 0;
+    if (!last || Date.now() - last > TTL) {
+      document.documentElement.className += ' ak-entrance';
+      window.localStorage.setItem(KEY, String(Date.now()));
+    }
+  } catch (e) {
+    // 隐私模式等无法读写 localStorage 时，仍然播放一次
+    document.documentElement.className += ' ak-entrance';
+  }
+})();</script><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>关于 | 巴别塔里的文字花圃</title><meta name="description" content="生命自会找到出路">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于">
+<meta property="og:url" content="https://georgemarx1024.github.io/about/index.html">
+<meta property="og:site_name" content="巴别塔里的文字花圃">
+<meta property="og:description" content="生命自会找到出路">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-11-25T02:29:52.244Z">
+<meta property="article:modified_time" content="2026-11-25T02:29:52.244Z">
+<meta property="article:author" content="君莫笑c47">
+<meta name="twitter:card" content="summary"><link rel="canonical" href="https://georgemarx1024.github.io/about/"><link rel="icon" type="image/png" href="/img/babel.png"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.woff2"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Oswald-Medium.woff2"><link rel="stylesheet" href="/css/arknights.css?v=mwvkth4p"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'XiaoZhuanSeal';
+  font-display: swap;
+  src: url('/font/SealScript.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Oswald-Medium';
+  font-display: swap;
+  src: local('Oswald-Medium'), local('Oswald Medium'), url('/font/Oswald-Medium.woff2') format('woff2');
+}
+</style><meta name="page-config" content="{&quot;code_fold&quot;:null}"><script class="pjax-js">var config = {"root":"/","code_fold":15,"search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}};
+var page_config = {
+  code_fold: null
+};
+function updatePageConfig() {
+  var newPageConfig = document.querySelector('meta[name="page-config"]');
+  if (newPageConfig) {
+    page_config = JSON.parse(newPageConfig.content);
+  }
+}
+document.addEventListener('pjax:complete', function() { updatePageConfig(); });
+updatePageConfig();</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@11.12.2/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@11.12.2/dist/mermaid.esm.min.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.vercount','meta[name=page-config]'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+const postBg = document.querySelector('#post-bg');
+if (postBg) lightGallery(postBg, {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.vercount','meta[name=page-config]'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 8.1.2"></head><body class="ak-about-page"><div class="ak-loading"><div class="ak-loading-deco" aria-hidden="true"><i class="ak-loading-line ak-loading-line-h"></i><i class="ak-loading-line ak-loading-line-v"></i></div><div class="ak-loading-logo"><img src="/img/title_logo.png" alt="巴别塔里的文字花圃"></div><div class="ak-loading-foot"><div class="ak-loading-copy"><span class="ak-loading-copyleft" aria-hidden="true">©</span><span class="ak-loading-owner">MOHISTMAN</span></div><div class="ak-loading-bar"><i class="ak-loading-bar-cap"></i><span class="ak-loading-bar-track"><i class="ak-loading-bar-fill"></i></span><i class="ak-loading-bar-cap"></i></div><div class="ak-loading-meta"><span class="ak-loading-num">LOADING - 0%</span><span class="ak-loading-url">https://georgemarx1024.github.io</span></div></div></div><script>(function () {
+  var el = document.querySelector('.ak-loading');
+  if (!el) return;
+  // 非首次进入网站：不播放入场动画（CSS 也已隐藏，这里直接移除）
+  if (!document.documentElement.classList.contains('ak-entrance')) {
+    if (el.parentNode) el.parentNode.removeChild(el);
+    return;
+  }
+  var fill = el.querySelector('.ak-loading-bar-fill');
+  var num = el.querySelector('.ak-loading-num');
+
+  // ===== 真实进度模型 =====
+  // 0%        —— 文档正在解析
+  // 25%       —— DOM 解析完成（DOMContentLoaded）
+  // 25%~99.5% —— 页面真实子资源（非懒加载图片、字体）的真实完成比例
+  // 100%      —— window.load 触发（图片、样式、脚本全部就绪）
+  // 显示值只会缓动逼近真实值，绝不会凭空上涨，也不会超过真实进度。
+  var raf = null;
+  var shown = 0;
+  var target = 0;
+  var pageLoaded = false;
+  var gone = false;
+  var imgs = [];
+  var fontsDone = false;
+  var allDoneAt = 0;
+  var graceTimer = null;
+
+  function render() {
+    var v = Math.round(shown);
+    fill.style.width = shown.toFixed(2) + '%';
+    num.textContent = 'LOADING - ' + v + '%';
+  }
+
+  function fade() {
+    if (gone) return;
+    gone = true;
+    el.classList.add('done');
+    setTimeout(function () {
+      if (el.parentNode) el.parentNode.removeChild(el);
+    }, 700);
+  }
+
+  function tick() {
+    raf = null;
+    if (gone) return;
+    if (shown < target) {
+      shown += (target - shown) * 0.18;
+      if (target - shown < 0.2) shown = target;
+      render();
+    }
+    if (shown < target) {
+      raf = window.requestAnimationFrame(tick);
+    } else if (pageLoaded && shown >= 100) {
+      setTimeout(fade, 240);
+    }
+  }
+
+  function step(p) {
+    if (gone || pageLoaded) return;
+    p = Math.min(99.5, Math.max(0, p));
+    if (p > target) {
+      target = p;
+      if (!raf) raf = window.requestAnimationFrame(tick);
+    }
+  }
+
+  function sync() {
+    if (gone || pageLoaded) return;
+    var done = 0;
+    var total = imgs.length + 1; // +1 = 字体
+    for (var i = 0; i < imgs.length; i++) {
+      if (imgs[i].complete) done++;
+    }
+    if (fontsDone) done++;
+    step(25 + 70 * (done / total));
+    // 本页被跟踪的资源全部就绪后开始计时：第三方资源（外链图片、CDN 等）
+    // 长时间不返回时也不再让遮罩卡住页面
+    allDoneAt = done >= total ? (allDoneAt || Date.now()) : 0;
+  }
+
+  function collect() {
+    var all = document.images || [];
+    for (var i = 0; i < all.length; i++) {
+      var im = all[i];
+      if (im.getAttribute('loading') === 'lazy') continue; // 懒加载不参与首屏进度
+      if (!im.getAttribute('src')) continue;
+      imgs.push(im);
+      if (!im.complete) {
+        im.addEventListener('load', sync);
+        im.addEventListener('error', sync);
+      }
+    }
+    if (document.fonts && document.fonts.ready && document.fonts.ready.then) {
+      document.fonts.ready.then(function () {
+        fontsDone = true;
+        sync();
+      }, function () {
+        fontsDone = true;
+        sync();
+      });
+    } else {
+      fontsDone = true;
+    }
+    sync();
+  }
+
+  function finish() {
+    if (gone || pageLoaded) return;
+    pageLoaded = true;
+    target = 100;
+    if (graceTimer) {
+      clearInterval(graceTimer);
+      graceTimer = null;
+    }
+    if (!raf) raf = window.requestAnimationFrame(tick);
+    // 兜底：标签页在后台等情况下 rAF 会被节流，直接补满并淡出
+    setTimeout(function () {
+      if (gone || !pageLoaded) return;
+      if (shown < 100) {
+        shown = target = 100;
+        render();
+      }
+      fade();
+    }, 1400);
+  }
+
+  render();
+
+  // 页面在脚本执行前就已加载完毕（缓存 / 回退缓存）
+  if (document.readyState === 'complete') {
+    shown = target = 100;
+    render();
+    setTimeout(fade, 200);
+    return;
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      step(25);
+      collect();
+    });
+  } else {
+    step(25);
+    collect();
+  }
+
+  window.addEventListener('load', finish);
+  window.addEventListener('pageshow', function (e) {
+    if (e.persisted) finish();
+  });
+  // 本页资源已就绪但 window.load 迟迟不触发（多因外链资源卡住）时的兜底
+  graceTimer = setInterval(function () {
+    if (gone || pageLoaded) {
+      clearInterval(graceTimer);
+      graceTimer = null;
+      return;
+    }
+    if (allDoneAt && Date.now() - allDoneAt > 2000) finish();
+  }, 400);
+  // 最终兜底：无论如何不让遮罩超过 12 秒
+  setTimeout(finish, 12000);
+})();
+</script><noscript><style>.ak-loading { display: none !important; }</style></noscript><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">INDEX 首页</span></a></li><li class="navItem"><a class="navBlock" href="/blog"><span class="navItemTitle">BLOG 博客</span></a></li><li class="navItem"><a class="navBlock" href="/projects"><span class="navItemTitle">PROJECTS 项目</span></a></li><li class="navItem"><a class="navBlock" href="/links"><span class="navItemTitle">LINKS 友链</span></a></li><li class="navItem"><a class="navBlock" href="/about"><span class="navItemTitle">ABOUT 关于</span></a></li></ol></nav></header><div class="ak-header"><a class="ak-logo" href="/"><img src="/img/title_logo.png" alt="巴别塔里的文字花圃"></a><div class="ak-nav"><a class="ak-nav-item" href="/" data-path="/"><span class="ak-nav-en">INDEX</span><span class="ak-nav-cn">首页</span></a><a class="ak-nav-item" href="/blog" data-path="/blog"><span class="ak-nav-en">BLOG</span><span class="ak-nav-cn">博客</span></a><a class="ak-nav-item" href="/projects" data-path="/projects"><span class="ak-nav-en">PROJECTS</span><span class="ak-nav-cn">项目</span></a><a class="ak-nav-item" href="/links" data-path="/links"><span class="ak-nav-en">LINKS</span><span class="ak-nav-cn">友链</span></a><a class="ak-nav-item" href="/about" data-path="/about"><span class="ak-nav-en">ABOUT</span><span class="ak-nav-cn">关于</span></a></div><div class="ak-actions"><button class="ak-btn" id="ak-search" type="button" title="搜索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21l-4.486-4.494M19 10.5a8.5 8.5 0 1 1-17 0a8.5 8.5 0 0 1 17 0Z"></path></svg></button><button class="ak-btn" id="ak-share" type="button" title="复制本站链接"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 35"><path fill="currentColor" fill-rule="evenodd" d="M19.281 10.017L6.058 22.967.48 17.506l5.578-5.461 2.789 2.73 7.648-7.485-1.397-1.367L20.677.461l5.58 5.462-5.58 5.461-1.396-1.367zm-4.863 10.217l4.863 4.761 1.396-1.367 5.58 5.461-5.58 5.462-5.579-5.462 1.397-1.366-4.863-4.761 2.786-2.728z"></path></svg></button><button class="ak-btn" id="ak-bgm" type="button" title="背景音乐开关"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 34"><path fill="currentColor" d="M25.998 23.422V11.29h3.999v12.132h-3.999zM19.497 6.234h4.001v22.243h-4.001V6.234zM12.998.867h4v32.978h-4V.867zm-6.5 5.367h4.001v22.243H6.498V6.234zm-6.5 5.056h4v12.132h-4V11.29z"></path></svg></button><button class="ak-btn" id="color-mode" type="button" title="明暗切换"><span id="ak-mode-icon" aria-hidden="true"></span></button></div></div><div class="ak-search-popup" tabindex="-1"><div class="ak-search-box"><input id="ak-search-input" type="text" placeholder="搜索文章…" autocomplete="off"><ul id="ak-search-results"></ul></div></div><script>(function () {
+  function rootPath() { return (window.config && window.config.root) ? window.config.root : '/'; }
+  function init() {
+    // —— 分享：复制链接 ——
+    var shareBtn = document.getElementById('ak-share');
+    if (shareBtn && !shareBtn.dataset.bound) {
+      shareBtn.dataset.bound = '1';
+      shareBtn.addEventListener('click', function () {
+        var url = location.href;
+        function ok() {
+          shareBtn.classList.add('ak-ok');
+          shareBtn.title = '已复制！';
+          setTimeout(function () { shareBtn.classList.remove('ak-ok'); shareBtn.title = '复制本站链接'; }, 1500);
+        }
+        function fallback() {
+          var ta = document.createElement('textarea');
+          ta.value = url; ta.style.position = 'fixed'; ta.style.opacity = '0';
+          document.body.appendChild(ta); ta.select();
+          try { document.execCommand('copy'); ok(); } catch (e) {}
+          document.body.removeChild(ta);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(ok).catch(fallback);
+        } else { fallback(); }
+      });
+    }
+    // —— 音乐开关 ——
+    var bgmBtn = document.getElementById('ak-bgm');
+    if (bgmBtn && !bgmBtn.dataset.bound) {
+      bgmBtn.dataset.bound = '1';
+      bgmBtn.addEventListener('click', function () {
+        var bgm = document.getElementById('bgm');
+        if (!bgm) return;
+        if (bgm.paused) {
+          bgm.play().then(function () { bgmBtn.classList.add('ak-on'); }).catch(function () {});
+        } else {
+          bgm.pause(); bgmBtn.classList.remove('ak-on');
+        }
+      });
+    }
+    // —— 明暗切换 ——
+    var modeBtn = document.getElementById('color-mode');
+    if (modeBtn && !modeBtn.dataset.bound) {
+      modeBtn.dataset.bound = '1';
+      modeBtn.addEventListener('click', function () {
+        if (window.colorMode && typeof colorMode.change === 'function') colorMode.change();
+      });
+    }
+    // —— 搜索 ——
+    var searchBtn = document.getElementById('ak-search');
+    var popup = document.querySelector('.ak-search-popup');
+    var input = document.getElementById('ak-search-input');
+    var ul = document.getElementById('ak-search-results');
+    if (searchBtn && !searchBtn.dataset.bound && popup && input) {
+      searchBtn.dataset.bound = '1';
+      var data = null;
+      function load() {
+        if (data) return Promise.resolve(data);
+        return fetch(rootPath() + 'search.json')
+          .then(function (r) { return r.json(); })
+          .then(function (d) { data = d || []; return data; })
+          .catch(function () { data = []; return data; });
+      }
+      function render(q) {
+        ul.innerHTML = '';
+        q = (q || '').trim().toLowerCase();
+        if (!q) return;
+        var n = 0;
+        (data || []).forEach(function (item) {
+          var title = item.title || '';
+          var content = item.content || '';
+          if (n >= 12) return;
+          if (title.toLowerCase().indexOf(q) === -1 && content.toLowerCase().indexOf(q) === -1) return;
+          n++;
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          a.href = item.url || '#';
+          a.textContent = title;
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        if (n === 0) {
+          var li2 = document.createElement('li');
+          li2.className = 'ak-search-empty';
+          li2.textContent = '没有找到相关文章';
+          ul.appendChild(li2);
+        }
+      }
+      function open() {
+        popup.classList.add('open');
+        load().then(function () { input.value = ''; input.focus(); });
+      }
+      function close() { popup.classList.remove('open'); }
+      searchBtn.addEventListener('click', open);
+      input.addEventListener('input', function () { render(input.value); });
+      input.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+      popup.addEventListener('click', function (e) { if (e.target === popup) close(); });
+    }
+    // —— 当前页高亮 ——
+    var path = location.pathname.replace(/index\.html$/, '');
+    document.querySelectorAll('.ak-nav-item').forEach(function (a) {
+      var p = (a.getAttribute('data-path') || '').replace(/index\.html$/, '');
+      var active = p === '/' ? (path === '/' || path === '') : (path.indexOf(p) === 0);
+      a.classList.toggle('ak-active', active);
+    });
+    // —— 首页（landing）占满宽度并隐藏侧栏，pjax 切换后也要同步 ——
+    document.body.classList.toggle('ak-home-page', path === '/' || path === '');
+  }
+  init();
+  document.addEventListener('pjax:complete', init);
+})();</script><article><div class="ak-about-shell"><div class="ak-about"><article class="ak-about-main"><div class="ak-about-head" id="content-header"><h1 class="ak-about-title">关于</h1><div class="ak-about-meta"><span class="ak-meta-num">—</span> views<span class="ak-meta-sep">|</span><a class="ak-meta-link" href="#comments"><span class="ak-meta-num">—</span> comments</a></div></div><div class="ak-about-content" id="content"><p>学生 / 打工人（INFJ→ISFJ）</p><p>正在努力打工并学习社交技能，主修人力资源管理。因为某些偶然原因爱上编程，对电子产品、旅游、摄影、文学创作和二次元充满热情。</p><p>座右铭：<span>(aria-hidden='true')  </span><span class="ak-spoiler">生命自会找到出路。</span></p><h2 id="hobbies">爱好</h2><ul class="ak-hobby-list"><li><b>编程 IDE</b>：JetBrains 全家桶 &gt; VSCodium</li><li><b>文学创作</b>：诗歌散文 → 流行歌词 → 古风/中国风歌词 → 文言文/古诗词</li><li><b>音乐</b>：听的比较杂，主听动漫和游戏音乐，偶尔尝试新歌。Navidrome &gt; 网易云音乐</li><li><b>游戏</b>：明日方舟 / 明日方舟终末地</li><li><b>运动</b>：散步（偶尔爬山）</li></ul><h2 id="tools">工具</h2><p>目前主要使用以下工具：</p><div class="ak-tool-group"><div class="ak-tool-group-title">影视创作</div><div class="ak-tool-grid"><a class="ak-tool" href="https://kdenlive.org/" target="_blank" rel="noopener"><span class="ak-tool-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="m8.727 1.554 2.727 4.334v16.558h1.091V5.889l2.728-4.335zm-6 4.948V9.8h7.091c.003-.83 0-1.672-.006-2.498 0-.383-.356-.732-.718-.8H2.727zm12.303.001c-.402.024-.835.41-.834.837l-.014 12.619c0 .57.767 1.065 1.207.727l8.28-6.331c.441-.335.44-1.12 0-1.455l-8.265-6.287a.553.553 0 0 0-.374-.11zM-.001 12v3.299h9.818V12zm4.363 5.497v3.3h5.455v-3.3z"></path></svg></span><span class="ak-tool-text"><span class="ak-tool-name">Kdenlive</span><span class="ak-tool-desc">视频制作</span></span></a></div></div><div class="ak-tool-group"><div class="ak-tool-group-title">生产力</div><div class="ak-tool-grid"><a class="ak-tool" href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener"><span class="ak-tool-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-4.502953659537916 -1.816370980454367 85.1080168931947 83.43087708452362"><linearGradient id="ff-a" x1=".898" x2=".066" y1=".155" y2=".931"><stop offset=".048" stop-color="#fff44f"/><stop offset=".111" stop-color="#ffe847"/><stop offset=".225" stop-color="#ffc830"/><stop offset=".368" stop-color="#ff980e"/><stop offset=".401" stop-color="#ff8b16"/><stop offset=".462" stop-color="#ff672a"/><stop offset=".534" stop-color="#ff3647"/><stop offset=".705" stop-color="#e31587"/></linearGradient><radialGradient id="ff-b" cx="67.813" cy="8.879" gradientUnits="userSpaceOnUse" r="80.797"><stop offset=".129" stop-color="#ffbd4f"/><stop offset=".186" stop-color="#ffac31"/><stop offset=".247" stop-color="#ff9d17"/><stop offset=".283" stop-color="#ff980e"/><stop offset=".403" stop-color="#ff563b"/><stop offset=".467" stop-color="#ff3750"/><stop offset=".71" stop-color="#f5156c"/><stop offset=".782" stop-color="#eb0878"/><stop offset=".86" stop-color="#e50080"/></radialGradient><radialGradient id="ff-c" cx="38.289" cy="41.911" gradientUnits="userSpaceOnUse" r="80.797"><stop offset=".3" stop-color="#960e18"/><stop offset=".351" stop-color="#b11927" stop-opacity=".74"/><stop offset=".435" stop-color="#db293d" stop-opacity=".343"/><stop offset=".497" stop-color="#f5334b" stop-opacity=".094"/><stop offset=".53" stop-color="#ff3750" stop-opacity="0"/></radialGradient><radialGradient id="ff-d" cx="48.03" cy="-9.457" gradientUnits="userSpaceOnUse" r="58.534"><stop offset=".132" stop-color="#fff44f"/><stop offset=".252" stop-color="#ffdc3e"/><stop offset=".506" stop-color="#ff9d12"/><stop offset=".526" stop-color="#ff980e"/></radialGradient><radialGradient id="ff-e" cx="29.352" cy="63.016" gradientUnits="userSpaceOnUse" r="38.471"><stop offset=".353" stop-color="#3a8ee6"/><stop offset=".472" stop-color="#5c79f0"/><stop offset=".669" stop-color="#9059ff"/><stop offset="1" stop-color="#c139e6"/></radialGradient><radialGradient id="ff-f" cx="-7935.62" cy="-8491.546" gradientTransform="matrix(.972 -.235 .275 1.138 10091.302 7833.798)" gradientUnits="userSpaceOnUse" r="20.397"><stop offset=".206" stop-color="#9059ff" stop-opacity="0"/><stop offset=".278" stop-color="#8c4ff3" stop-opacity=".064"/><stop offset=".747" stop-color="#7716a8" stop-opacity=".45"/><stop offset=".975" stop-color="#6e008b" stop-opacity=".6"/></radialGradient><radialGradient id="ff-g" cx="37.269" cy="5.573" gradientUnits="userSpaceOnUse" r="27.676"><stop offset="0" stop-color="#ffe226"/><stop offset=".121" stop-color="#ffdb27"/><stop offset=".295" stop-color="#ffc82a"/><stop offset=".502" stop-color="#ffa930"/><stop offset=".732" stop-color="#ff7e37"/><stop offset=".792" stop-color="#ff7139"/></radialGradient><radialGradient id="ff-h" cx="59.023" cy="-11.981" gradientUnits="userSpaceOnUse" r="118.081"><stop offset=".113" stop-color="#fff44f"/><stop offset=".456" stop-color="#ff980e"/><stop offset=".622" stop-color="#ff5634"/><stop offset=".716" stop-color="#ff3647"/><stop offset=".904" stop-color="#e31587"/></radialGradient><radialGradient id="ff-i" cx="-7927.165" cy="-8522.859" gradientTransform="matrix(.105 .995 -.653 .069 -4684.004 8470.191)" gradientUnits="userSpaceOnUse" r="86.499"><stop offset="0" stop-color="#fff44f"/><stop offset=".06" stop-color="#ffe847"/><stop offset=".168" stop-color="#ffc830"/><stop offset=".304" stop-color="#ff980e"/><stop offset=".356" stop-color="#ff8b16"/><stop offset=".455" stop-color="#ff672a"/><stop offset=".57" stop-color="#ff3647"/><stop offset=".737" stop-color="#e31587"/></radialGradient><radialGradient id="ff-j" cx="36.617" cy="15.824" gradientUnits="userSpaceOnUse" r="73.72"><stop offset=".137" stop-color="#fff44f"/><stop offset=".48" stop-color="#ff980e"/><stop offset=".592" stop-color="#ff5634"/><stop offset=".655" stop-color="#ff3647"/><stop offset=".904" stop-color="#e31587"/></radialGradient><radialGradient id="ff-k" cx="56.077" cy="20.139" gradientUnits="userSpaceOnUse" r="80.686"><stop offset=".094" stop-color="#fff44f"/><stop offset=".231" stop-color="#ffe141"/><stop offset=".509" stop-color="#ffaf1e"/><stop offset=".626" stop-color="#ff980e"/></radialGradient><linearGradient id="ff-l" x1=".888" x2=".18" y1=".151" y2=".835"><stop offset=".167" stop-color="#fff44f" stop-opacity=".8"/><stop offset=".266" stop-color="#fff44f" stop-opacity=".634"/><stop offset=".489" stop-color="#fff44f" stop-opacity=".217"/><stop offset=".6" stop-color="#fff44f" stop-opacity="0"/></linearGradient><path d="M74.62 26.83c-1.7-4.06-5.1-8.43-7.78-9.8a40.27 40.27 0 0 1 3.93 11.75v.07C66.4 17.92 58.97 13.52 52.9 3.92c-.32-.48-.62-.97-.92-1.48-.17-.3-.3-.56-.43-.8A7.05 7.05 0 0 1 50.97.1a.1.1 0 0 0-.08-.1.14.14 0 0 0-.1 0v.02c0 .02-.03 0-.03 0V0c-9.72 5.7-13.03 16.26-13.33 21.53a19.4 19.4 0 0 0-10.67 4.12 11.6 11.6 0 0 0-1-.76 17.97 17.97 0 0 1-.1-9.5 28.7 28.7 0 0 0-9.34 7.22c-1.55-1.94-1.44-8.36-1.35-9.7a6.93 6.93 0 0 0-1.3.68 28.23 28.23 0 0 0-3.8 3.25 33.84 33.84 0 0 0-3.6 4.35 32.73 32.73 0 0 0-5.2 11.74L1 33.2c-.07.33-.34 2.04-.38 2.4v.1A36.94 36.94 0 0 0 0 41.04v.2a38.76 38.76 0 0 0 76.95 6.56c.07-.5.12-1 .18-1.5a39.86 39.86 0 0 0-2.5-19.47zM29.95 57.16c.18.1.35.2.53.27l.03.02q-.27-.14-.55-.3zm40.83-28.32v-.03.04z" fill="url(#ff-a)"/><path d="M74.62 26.83c-1.7-4.06-5.1-8.43-7.78-9.8a40.27 40.27 0 0 1 3.93 11.75v.08a35.1 35.1 0 0 1-1.2 26.16c-4.44 9.53-15.2 19.3-32.03 18.82-18.18-.5-34.2-14-37.2-31.68-.54-2.8 0-4.2.28-6.47A28.88 28.88 0 0 0 0 41.03v.2a38.76 38.76 0 0 0 76.95 6.56c.07-.5.12-1 .18-1.5a39.86 39.86 0 0 0-2.5-19.47z" fill="url(#ff-b)"/><path d="M55.78 31.38c.1.06.16.12.24.18a21.1 21.1 0 0 0-3.6-4.7C40.38 14.82 49.27.74 50.77.03V0c-9.72 5.7-13.03 16.26-13.33 21.53.45-.03.9-.06 1.36-.06a19.56 19.56 0 0 1 16.98 9.9z" fill="url(#ff-d)"/><path d="M38.83 33.8c-.07.95-3.47 4.28-4.67 4.28-11.02 0-12.8 6.66-12.8 6.66.48 5.62 4.4 10.24 9.12 12.7l.66.3q.57.25 1.14.47a17.23 17.23 0 0 0 5.04.98c19.32.9 23.06-23.1 9.12-30.07a13.38 13.38 0 0 1 9.34 2.28 19.56 19.56 0 0 0-16.98-9.9c-.46 0-.9.02-1.36.05a19.4 19.4 0 0 0-10.67 4.12c.6.5 1.26 1.16 2.67 2.55 2.63 2.6 9.37 5.27 9.4 5.6z" fill="url(#ff-e)"/><path d="M24.97 24.36c.3.2.57.37.8.53a17.97 17.97 0 0 1-.1-9.5 28.7 28.7 0 0 0-9.34 7.22c.2 0 5.8-.1 8.64 1.74z" fill="url(#ff-g)"/><path d="M.35 42.16c3 17.67 19 31.17 37.2 31.68 16.83.48 27.58-9.3 32.02-18.82a35.1 35.1 0 0 0 1.2-26.16v-.04-.04l.02.07c1.36 8.98-3.2 17.67-10.34 23.55l-.03.05c-13.9 11.33-27.2 6.84-29.9 5q-.3-.13-.57-.28c-8.1-3.87-11.46-11.26-10.74-17.6a9.95 9.95 0 0 1-9.18-5.77 14.62 14.62 0 0 1 14.25-.57 19.3 19.3 0 0 0 14.54.57c-.02-.32-6.76-3-9.4-5.6-1.4-1.38-2.06-2.04-2.66-2.54a11.6 11.6 0 0 0-1-.76c-.23-.16-.48-.33-.8-.53-2.82-1.84-8.44-1.74-8.63-1.74h-.02c-1.53-1.94-1.43-8.36-1.34-9.7a6.93 6.93 0 0 0-1.3.68 28.23 28.23 0 0 0-3.8 3.26 33.84 33.84 0 0 0-3.63 4.34 32.73 32.73 0 0 0-5.2 11.74c-.02.08-1.4 6.1-.72 9.22z" fill="url(#ff-h)"/><path d="M52.43 26.86a21.1 21.1 0 0 1 3.6 4.7c.2.17.4.33.58.48 8.8 8.1 4.2 19.55 3.85 20.37 7.13-5.88 11.7-14.57 10.33-23.55-4.4-10.93-11.82-15.33-17.9-24.93-.3-.48-.6-.97-.9-1.48-.17-.3-.3-.56-.43-.8A7.05 7.05 0 0 1 50.97.1a.1.1 0 0 0-.08-.1.14.14 0 0 0-.1 0v.02c0 .02-.03 0-.03 0-1.5.72-10.4 14.8 1.66 26.84z" fill="url(#ff-i)"/><path d="M56.6 32.04c-.17-.16-.37-.32-.58-.48l-.24-.18a13.38 13.38 0 0 0-9.35-2.27c13.94 6.98 10.2 31-9.12 30.08a17.23 17.23 0 0 1-5.03-.97q-.57-.2-1.14-.46c-.22-.1-.43-.2-.65-.3h.03c2.7 1.84 16 6.34 29.92-5l.02-.04c.35-.8 4.95-12.27-3.84-20.36z" fill="url(#ff-j)"/><path d="M21.35 44.74s1.8-6.66 12.8-6.66c1.2 0 4.6-3.33 4.68-4.3a19.3 19.3 0 0 1-14.56-.56 14.62 14.62 0 0 0-14.25.57 9.95 9.95 0 0 0 9.2 5.76c-.73 6.34 2.62 13.73 10.73 17.6.18.1.35.18.53.27-4.73-2.45-8.64-7.07-9.13-12.7z" fill="url(#ff-k)"/></svg></span><span class="ak-tool-text"><span class="ak-tool-name">Firefox</span><span class="ak-tool-desc">浏览器</span></span></a><a class="ak-tool" href="https://anytype.io/" target="_blank" rel="noopener"><span class="ak-tool-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.333 0h13.334A5.32 5.32 0 0 1 24 5.333v13.334A5.32 5.32 0 0 1 18.667 24H5.333A5.32 5.32 0 0 1 0 18.667V5.333A5.32 5.32 0 0 1 5.333 0m10.334 7.667v-3H6.344v3zm0 0v11.666h3V7.667ZM9.5 19.333a4.833 4.833 0 1 0 0-9.666 4.833 4.833 0 0 0 0 9.666" fill="#6c4ee3"/></svg></span><span class="ak-tool-text"><span class="ak-tool-name">Anytype</span><span class="ak-tool-desc">知识与笔记</span></span></a><a class="ak-tool" href="https://www.zotero.org/" target="_blank" rel="noopener"><span class="ak-tool-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M21.231 2.462 7.18 20.923h14.564V24H2.256v-2.462L16.308 3.076H2.975V0h18.256v2.462z"></path></svg></span><span class="ak-tool-text"><span class="ak-tool-name">Zotero</span><span class="ak-tool-desc">文献综述</span></span></a></div></div><div class="ak-tool-group"><div class="ak-tool-group-title">开发</div><div class="ak-tool-grid"><div class="ak-tool"><span class="ak-tool-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3.2l8.8 8.8-8.8 8.8L3.2 12z"></path></svg></span><span class="ak-tool-text"><span class="ak-tool-name">KDevelop</span><span class="ak-tool-desc">IDE</span></span></div><a class="ak-tool" href="https://www.jetbrains.com/clion/" target="_blank" rel="noopener"><span class="ak-tool-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid"><defs><linearGradient x1=".242%" y1="50%" x2="115.269%" y2="50%" id="cl-a"><stop stop-color="#ED358C" offset="0%"/><stop stop-color="#E9388C" offset="16%"/><stop stop-color="#DE418C" offset="30%"/><stop stop-color="#CC508C" offset="43%"/><stop stop-color="#B2658D" offset="57%"/><stop stop-color="#90808D" offset="70%"/><stop stop-color="#67A18E" offset="83%"/><stop stop-color="#37C78F" offset="95%"/><stop stop-color="#22D88F" offset="100%"/></linearGradient><linearGradient x1="66.762%" y1="17.457%" x2="28.197%" y2="151.84%" id="cl-b"><stop stop-color="#22D88F" offset="9%"/><stop stop-color="#029DE0" offset="90%"/></linearGradient><linearGradient x1="10618.142%" y1="-66066%" x2="-1095.231%" y2="-79666%" id="cl-c"><stop stop-color="#22D88F" offset="9%"/><stop stop-color="#029DE0" offset="90%"/></linearGradient><linearGradient x1="5973.425%" y1="-73910%" x2="9952.73%" y2="-74606%" id="cl-d"><stop stop-color="#22D88F" offset="9%"/><stop stop-color="#029DE0" offset="90%"/></linearGradient></defs><path fill="url(#cl-a)" d="M98.4 103.6l-17.2 7.2L96.8 0l58.8 32.4z"/><path fill="url(#cl-b)" d="M89.2 153.6L97.6 0l-74 46.4L0 188z"/><path fill="url(#cl-c)" d="M250.8 76.8L218 9.6l-62.4 22.8L110 82.8 0 188l83.2 60.8 104-94.4z"/><path fill="url(#cl-d)" d="M107.6 109.2l-14.4 87.6 58.4 45.2 64 14 40.4-91.2z"/><path d="M63.2 178h60v10h-60v-10zM62 102.4A33.66 33.66 0 0 1 96.4 68c12.4 0 20 4 26 10.4l-9.2 10.8c-5.2-4.8-10.4-7.6-16.8-7.6-11.2 0-19.2 9.2-19.2 20.8 0 11.2 8 20.8 19.2 20.8 7.6 0 12.4-3.2 17.6-7.6l9.2 9.2c-6.8 7.2-14.4 12-27.2 12a34 34 0 0 1-34-34.4zm71.2-33.6H148v54h28.8v12.4h-43.6V68.8z" fill="#FFF"/></svg></span><span class="ak-tool-text"><span class="ak-tool-name">CLion</span><span class="ak-tool-desc">IDE</span></span></a><a class="ak-tool" href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener"><span class="ak-tool-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid"><defs><linearGradient x1="0%" y1="50%" x2="99.799%" y2="50%" id="ij-a"><stop stop-color="#F97A12" offset="26%"/><stop stop-color="#B07B58" offset="46%"/><stop stop-color="#577BAE" offset="72%"/><stop stop-color="#1E7CE5" offset="91%"/><stop stop-color="#087CFA" offset="100%"/></linearGradient><linearGradient x1=".345%" y1="34.54%" x2="121.182%" y2="77.619%" id="ij-b"><stop stop-color="#F97A12" offset="0%"/><stop stop-color="#CB7A3E" offset="7%"/><stop stop-color="#9E7B6A" offset="15%"/><stop stop-color="#757B91" offset="24%"/><stop stop-color="#537BB1" offset="33%"/><stop stop-color="#387CCC" offset="43%"/><stop stop-color="#237CE0" offset="54%"/><stop stop-color="#147CEF" offset="66%"/><stop stop-color="#0B7CF7" offset="79%"/><stop stop-color="#087CFA" offset="100%"/></linearGradient><linearGradient x1="78.169%" y1="97.749%" x2="30.106%" y2="-6.624%" id="ij-c"><stop stop-color="#FE315D" offset="0%"/><stop stop-color="#CB417E" offset="8%"/><stop stop-color="#9E4E9B" offset="16%"/><stop stop-color="#755BB4" offset="25%"/><stop stop-color="#5365CA" offset="34%"/><stop stop-color="#386DDB" offset="44%"/><stop stop-color="#2374E9" offset="54%"/><stop stop-color="#1478F3" offset="66%"/><stop stop-color="#0B7BF8" offset="79%"/><stop stop-color="#087CFA" offset="100%"/></linearGradient><linearGradient x1="20%" y1="24.087%" x2="103.422%" y2="132.676%" id="ij-d"><stop stop-color="#FE315D" offset="0%"/><stop stop-color="#F63462" offset="4%"/><stop stop-color="#DF3A71" offset="10%"/><stop stop-color="#C24383" offset="17%"/><stop stop-color="#AD4A91" offset="29%"/><stop stop-color="#755BB4" offset="55%"/><stop stop-color="#1D76ED" offset="92%"/><stop stop-color="#087CFA" offset="100%"/></linearGradient></defs><path fill="url(#ij-a)" d="M64.8 199.6l-62-48.8 30.8-57.2L122 128z"/><path fill="url(#ij-b)" d="M256 68.4l-4.8 148-98.4 39.6-59.2-38.4L180 128l-37.6-83.2 34-40.8z"/><path fill="url(#ij-c)" d="M256 68.4l-78 92-35.6-115.6 34-40.8z"/><path fill="url(#ij-d)" d="M123.2 212.4L20.8 249.6 37.2 192l21.2-71.2L0 101.2 37.2 0l80 9.6 79.2 90.4z"/><path d="M63.2 178h60v10h-60v-10zM106 80.8v-12H73.2v12h9.2v42h-9.2v12.4H106v-12.4h-9.2v-42h9.2zm32 55.2a26.84 26.84 0 0 1-13.2-2.8 31.48 31.48 0 0 1-8.8-7.2l9.2-10.4a29.88 29.88 0 0 0 5.6 4.8 11.72 11.72 0 0 0 6.4 1.6 7.44 7.44 0 0 0 6.4-2.8 11.72 11.72 0 0 0 2.4-8.4V68h14.8v43.2a27.08 27.08 0 0 1-1.6 10.4 20 20 0 0 1-5.6 8.8A28.6 28.6 0 0 1 138 136z" fill="#FFF"/></svg></span><span class="ak-tool-text"><span class="ak-tool-name">IntelliJ IDEA Community</span><span class="ak-tool-desc">IDE</span></span></a><a class="ak-tool" href="https://vscodium.com/" target="_blank" rel="noopener"><span class="ak-tool-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><defs><linearGradient id="vs-a" gradientUnits="userSpaceOnUse" x1="199.997" y1="214.302" x2="296.665" y2="307.573" gradientTransform="matrix(1.28 0 0 1.28 -256 -272.64)"><stop offset="0" stop-color="#62A0EA"/><stop offset="1" stop-color="#1A5FB4"/></linearGradient></defs><path d="M61.773 2.91c-3.652 2.344-4.707 7.2-2.351 10.84C72.359 33.79 75.414 48.902 74.09 62.148c-5.356 25.364-16.996 30.508-27.172 30.508-9.934 0-7.273-16.344.195-21.129 4.457-2.785 10.164-4.593 14.547-4.593 4.34 0 7.86-3.508 7.86-7.836 0-4.332-3.52-7.84-7.86-7.84-5.117 0-10.14 1.078-14.824 2.906.957-4.516 1.309-9.398.07-14.586-1.879-7.883-7.285-15.406-16.68-22.703a7.86 7.86 0 0 0-5.8-1.598 7.86 7.86 0 0 0-5.235 2.961 7.826 7.826 0 0 0 1.38 11c7.652 5.946 10.179 10.344 11.042 13.965.867 3.621.172 7.504-1.566 12.844-2.219 7.191-4.793 13.613-5.922 19.773-.555 3.032-.602 6.328-.746 8.965-5.512-5.37-7.668-12.46-7.668-22.824 0-4.328-3.52-7.84-7.86-7.836s-7.855 3.508-7.855 7.836c0 14.152 4.137 27.617 15.23 36.602 10.04 9.562 35.57 6.027 35.57 21.386 0 4.332 6.345 6.442 10.684 6.442 4.454 0 10.055-2.977 10.055-6.442 0-17.426 18.363-28.015 48.59-27.969 4.344.008 7.863-3.5 7.871-7.828.008-4.332-3.504-7.847-7.848-7.855-2.066 0-4.082.07-6.066.187 3.379-7.949 4.879-16.699 4.566-26.148-.14-4.328-3.773-7.723-8.113-7.582-4.344.144-7.746 3.77-7.601 8.098.41 12.375-.055 23.425-9.274 29.253-2.62 1.653-5.672 3.09-8.562 3.09 2.246-6.101 3.941-12.547 4.632-19.488.446-4.434.493-9.7-.015-13.785-.781-6.336-1.73-13.524.676-18.938 2.16-4.66 7-6.613 14.109-6.613 4.336-.004 7.852-3.512 7.852-7.836.003-4.332-3.512-7.844-7.852-7.848-10.563 0-18.57 5.56-23.11 12.274-2.37-5.066-5.261-10.29-8.753-15.7a7.87 7.87 0 0 0-4.942-3.413 7.9 7.9 0 0 0-3.066-.059 7.9 7.9 0 0 0-2.856 1.121m0 0" fill="url(#vs-a)"/></svg></span><span class="ak-tool-text"><span class="ak-tool-name">VSCodium</span><span class="ak-tool-desc">IDE</span></span></a></div></div><div class="ak-tool-group"><div class="ak-tool-group-title">环境</div><div class="ak-tool-grid"><div class="ak-tool"><span class="ak-tool-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 58"><path d="M0 14v14h28V0H0zm30 0v14h28V0H30zM0 44v14h28V30H0zm30 0v14h28V30H30z" fill="#0078d4"/></svg></span><span class="ak-tool-text"><span class="ak-tool-name">Windows 11</span><span class="ak-tool-desc">惠普战 66</span></span></div><a class="ak-tool" href="https://www.opensuse.org/" target="_blank" rel="noopener"><span class="ak-tool-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M10.724 0a12 12 0 0 0-9.448 4.623c1.464.391 2.5.727 2.81.832.005-.19.037-1.893.037-1.893s.004-.04.025-.06c.026-.026.065-.018.065-.018.385.056 8.602 1.274 12.066 3.292.427.25.638.517.902.786.958.99 2.223 5.108 2.359 5.957.005.033-.036.07-.054.083a5.177 5.177 0 0 1-.313.228c-.82.55-2.708 1.872-5.13 1.656-2.176-.193-5.018-1.44-8.445-3.699.336.79.668 1.58 1 2.371.497.258 5.287 2.7 7.651 2.651 1.904-.04 3.941-.968 4.756-1.458 0 0 .179-.108.257-.048.085.066.061.167.041.27-.05.234-.164.66-.242.863l-.065.165c-.093.25-.183.482-.356.625-.48.436-1.246.784-2.446 1.305-1.855.812-4.865 1.328-7.66 1.31-1.001-.022-1.968-.133-2.817-.232-1.743-.197-3.161-.357-4.026.269A12 12 0 0 0 10.724 24a12 12 0 0 0 12-12 12 12 0 0 0-12-12zM13.4 6.963a3.503 3.503 0 0 0-2.521.942 3.498 3.498 0 0 0-1.114 2.449 3.528 3.528 0 0 0 3.39 3.64 3.48 3.48 0 0 0 2.524-.946 3.504 3.504 0 0 0 1.114-2.446 3.527 3.527 0 0 0-3.393-3.64zm-.03 1.035a2.458 2.458 0 0 1 2.368 2.539 2.43 2.43 0 0 1-.774 1.706 2.456 2.456 0 0 1-1.762.659 2.461 2.461 0 0 1-2.364-2.542c.02-.655.3-1.26.777-1.707a2.419 2.419 0 0 1 1.756-.655zm.402 1.23c-.602 0-1.087.325-1.087.727 0 .4.485.725 1.087.725.6 0 1.088-.326 1.088-.725 0-.402-.487-.726-1.088-.726Z"></path></svg></span><span class="ak-tool-text"><span class="ak-tool-name">openSUSE</span><span class="ak-tool-desc">惠普战 66</span></span></a><div class="ak-tool"><span class="ak-tool-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3.2l8.8 8.8-8.8 8.8L3.2 12z"></path></svg></span><span class="ak-tool-text"><span class="ak-tool-name">ColorOS 17</span><span class="ak-tool-desc">一加 16</span></span></div><div class="ak-tool"><span class="ak-tool-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3.2l8.8 8.8-8.8 8.8L3.2 12z"></path></svg></span><span class="ak-tool-text"><span class="ak-tool-name">ColorOS 16</span><span class="ak-tool-desc">OPPO Pad 5 Pro</span></span></div></div></div><h2 id="social">社交网络</h2><p>由 Substats 实时显示数据</p><div class="ak-social-grid"><a class="ak-social-row" href="https://github.com/georgemarx1024" target="_blank" rel="noopener"><span class="ak-social-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg></span><span class="ak-social-name">GitHub</span></a><a class="ak-social-row" href="https://t.me/georgemarx1024" target="_blank" rel="noopener"><span class="ak-social-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg></span><span class="ak-social-name">Telegram</span></a><a class="ak-social-row" href="https://www.coolapk.com/u/25698442" target="_blank" rel="noopener"><span class="ak-social-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path transform="scale(0.031, 0.031) translate(-120, -100)" d="M315.2 343.093c53.547-12.8 111.52-1.92 158.72 25.76 34.987 21.12 65.44 48.64 97.493 73.707-17.706 12-35.253 24.16-53.173 35.84-32.747-24.693-62.933-54.88-102.56-68.48-36.373-12.533-78.827-14.4-113.387 4.64-35.413 18.773-59.733 57.333-59.68 97.653-1.066 40.48 22.667 79.734 57.76 99.414-37.814 21.76 86.08 18.88 124.534 0.32 47.626-23.307 80.32-67.147 109.653-109.814 31.52-48.96 59.573-100.053 90.293-149.493 6.72-12.533 22.507-19.253 36-14.133 12.534 4 17.92 16.96 23.894 27.466 47.466 85.6 95.52 170.827 143.573 256.054 7.52 13.653 18.507 27.84 13.867 44.48-3.52 20.533-30.827 27.573-46.4 16-66.24-49.067-132.8-97.814-198.934-147.147 16.374-13.707 34.934-24.533 52.374-36.8 22.933 17.013 45.866 34.08 68.906 50.933-22.026-40.853-45.6-80.8-67.893-121.493-42.613 66.08-77.387 138.773-135.04 193.653-41.387 41.12-98.453 69.227-157.813 65.974-92.054 4.213-175.414-78.774-174.614-170.347-3.84-79.68 55.04-156 132.427-174.187z" fill="currentColor"></path></svg></span><span class="ak-social-name">酷安</span></a><a class="ak-social-row" href="https://space.bilibili.com/365326523" target="_blank" rel="noopener"><span class="ak-social-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"></path></svg></span><span class="ak-social-name">哔哩哔哩</span></a><div class="ak-social-row is-plain"><span class="ak-social-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"></path></svg></span><span class="ak-social-name">X（Twitter）</span></div><div class="ak-social-row is-plain"><span class="ak-social-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"></path></svg></span><span class="ak-social-name">Threads</span></div><div class="ak-social-row is-plain"><span class="ak-social-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"></path></svg></span><span class="ak-social-name">Steam</span></div><div class="ak-social-row is-plain"><span class="ak-social-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0zm1.964 4.078c-.271.73-.5 1.434-.68 2.11h4.587c.545-.006.445 1.168.445 1.171H9.384a58.104 58.104 0 01-.112 3.797h2.712c.388.023.393 1.251.393 1.266H9.183a9.223 9.223 0 01-.408 2.102l.757-.604c.452.456 1.512 1.712 1.906 2.177.473.681.063 2.081.063 2.081l-2.794-3.382c-.653 2.518-1.845 3.607-1.845 3.607-.523.468-1.58.82-2.64.516 2.218-1.73 3.44-3.917 3.667-6.497H4.491c0-.015.197-1.243.806-1.266h2.71c.024-.32.086-3.254.086-3.797H6.598c-.136.406-.158.447-.268.753-.594 1.095-1.603 1.122-1.907 1.155.906-1.821 1.416-3.6 1.591-4.064.425-1.124 1.671-1.125 1.671-1.125zM13.078 6h6.377v11.33h-2.573l-2.184 1.373-.401-1.373h-1.219zm1.313 1.219v8.86h.623l.263.937 1.455-.938h1.456v-8.86z"></path></svg></span><span class="ak-social-name">知乎</span></div></div><h2 id="gossip">八卦</h2><details class="ak-collapse"><summary><span class="ak-collapse-title">Mohistman 有何意义吗？</span><span class="ak-collapse-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line class="ak-arrow-line" x1="5" y1="12" x2="19" y2="12"></line><polyline class="ak-arrow-head" points="12 5 19 12 12 19"></polyline></svg></span></summary><div class="ak-collapse-body"><p>Mohistman 是墨者的英文，墨者隶属于战国时期一个叫「墨家」的思想流派。墨家主张兼爱、非攻，反对大国兼并和恃强凌弱，对中国历史产生了深远影响。不仅如此，墨家还在科学技术方面有深入研究，在力学、光学方面贡献卓著。</p></div></details><h2 id="blog">关于博客</h2><p>浏览量统计：</p><div class="ak-views-box"><p><span class="k">今天</span><span class="v">— 名用户，— 次访问</span></p><p><span class="k">昨天</span><span class="v">— 名用户，— 次访问</span></p><p><span class="k">上个月</span><span class="v">— 次访问</span></p><p><span class="k">去年</span><span class="v">— 次访问</span></p></div><p>网站历史：</p><ul class="ak-timeline"><li><span class="ak-tl-dot"></span><span class="ak-tl-line"></span><div class="ak-tl-body"><samp>2026-11-18</samp><span>正式立项，定位为纯博客网站，开始使用 Hexo 来搭建博客</span></div></li><li><span class="ak-tl-dot"></span><span class="ak-tl-line"></span><div class="ak-tl-body"><samp>2026-11-19</samp><span>开始完善博客：基于 Vue_plus 的 Arknights 主题、明日方舟官网的美术设计，以及网友 CWorld 的网站版面设计，对前端进行大改</span></div></li><li><span class="ak-tl-dot"></span><span class="ak-tl-line"></span><div class="ak-tl-body"><samp>2026-11-20</samp><span>不再拘泥于纯博客定位，开始拓展更多栏目</span></div></li><li><span class="ak-tl-dot"></span><span class="ak-tl-line"></span><div class="ak-tl-body"><samp>2026-11-24</samp><span>网站初具雏形</span></div></li></ul></div><footer class="ak-about-footer" id="comments"><p>注：鉴于自己贫瘠的前端技能，目前只能由 AI 进行网站设计。但我可以保证的是，所有栏目的文字内容：</p><span class="ak-about-badge"><img class="badge-black" src="/img/not-by-ai-black.svg" alt="Written by Human · Not by AI" width="131" height="42"><img class="badge-white" src="/img/not-by-ai-white.svg" alt="Written by Human · Not by AI" width="131" height="42"></span></footer></article><aside class="ak-about-toc" id="sidebar"><h2 class="ak-toc-title">目录</h2><ul class="ak-toc-list"><li class="ak-toc-item"><span class="ak-toc-bar"></span><a class="ak-toc-link" href="#hobbies">爱好</a></li><li class="ak-toc-item"><span class="ak-toc-bar"></span><a class="ak-toc-link" href="#tools">工具</a></li><li class="ak-toc-item"><span class="ak-toc-bar"></span><a class="ak-toc-link" href="#social">社交网络</a></li><li class="ak-toc-item"><span class="ak-toc-bar"></span><a class="ak-toc-link" href="#gossip">八卦</a></li><li class="ak-toc-item"><span class="ak-toc-bar"></span><a class="ak-toc-link" href="#blog">关于博客</a></li></ul></aside></div></div><script>(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.ak-toc-link'));
+  if (!links.length) return;
+  var secs = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+  var scroller = document.querySelector('main');
+  function highlight() {
+    var probe = (scroller ? scroller.getBoundingClientRect().top : 0) + 190;
+    var last = 0;
+    secs.forEach(function (sec, i) { if (sec && sec.getBoundingClientRect().top <= probe) last = i; });
+    links.forEach(function (a, i) {
+      var item = a.parentElement;
+      if (!item) return;
+      item.classList.toggle('is-active', i === last);
+      item.classList.toggle('is-read', i < last);
+    });
+  }
+  (scroller || window).addEventListener('scroll', highlight, { passive: true });
+  window.addEventListener('resize', highlight);
+  highlight();
+})();</script><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><audio id="bgm" src="/audio/bgm.mp3" loop crossorigin="anonymous"></audio></div></div></article></main><canvas id="canvas-dust"></canvas></body></html>
