@@ -3201,6 +3201,9 @@ table .code {
 body.ak-about-page article {
   width: 100%;
 }
+.ak-about-main {
+  padding-top: 0;
+}
 .ak-about-shell {
   width: 100%;
   padding: 0 1.5rem 4rem;
@@ -3210,6 +3213,35 @@ body.ak-about-page article {
   margin-left: -1.5rem;
   margin-right: -1.5rem;
   margin-bottom: -4rem;
+}
+.ak-about-back {
+  width: 100%;
+  max-width: 65rem;
+  margin: 0 auto 0.75rem;
+  box-sizing: border-box;
+  text-align: left;
+}
+.ak-about-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--ak-about-border);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--ak-about-muted);
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+.ak-about-back-link svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+.ak-about-back-link:hover {
+  color: var(--ak-about-accent);
+  border-color: rgba(25,209,255,0.45);
+  background-color: transparent;
 }
 .ak-about {
   display: grid;
@@ -3224,7 +3256,7 @@ body.ak-about-page article {
 .ak-about-head {
   margin-bottom: 2rem;
 }
-.ak-about-title {
+.ak-about-head h1 {
   margin: 0 0 0.5rem;
   padding: 0;
   font-size: 1.5rem;
