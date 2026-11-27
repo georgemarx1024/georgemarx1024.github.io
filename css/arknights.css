@@ -3195,7 +3195,7 @@ table .code {
   --ak-about-border: rgba(0,0,0,0.14);
   --ak-about-card: rgba(255,255,255,0.72);
   --ak-about-soft: rgba(0,0,0,0.05);
-  --ak-about-accent: #3d6b86;
+  --ak-about-accent: #1b7fa6;
   --ak-about-read-bar: rgba(0,0,0,0.28);
 }
 body.ak-about-page article {
@@ -3259,18 +3259,19 @@ body.ak-about-page article {
 .ak-about-head h1 {
   margin: 0 0 0.5rem;
   padding: 0;
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.75rem;
+  font-weight: 700;
   line-height: 1.25;
   color: var(--ak-about-strong);
 }
 .ak-about-meta {
   font-size: 0.875rem;
   font-style: italic;
+  font-family: 'Sarasa Gothic SC', '更纱黑体 SC', 'Microsoft YaHei', sans-serif;
   color: var(--ak-about-muted);
 }
 .ak-about-meta .ak-meta-num {
-  font-family: 'Oswald-Medium', 'Sarasa Gothic SC', sans-serif !important;
+  font-family: inherit;
   font-style: normal;
 }
 .ak-about-meta .ak-meta-sep {
@@ -3399,6 +3400,9 @@ body.ak-about-page article {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.ak-tool:hover .ak-tool-name {
+  color: var(--ak-about-accent);
 }
 .ak-tool-desc {
   font-size: 0.75rem;

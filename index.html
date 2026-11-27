@@ -21,7 +21,7 @@
 <meta property="article:published_time" content="2026-11-23T07:56:46.604Z">
 <meta property="article:modified_time" content="2026-11-23T07:56:46.591Z">
 <meta property="article:author" content="君莫笑c47">
-<meta name="twitter:card" content="summary"><link rel="canonical" href="https://georgemarx1024.github.io/"><link rel="icon" type="image/png" href="/img/babel.png"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.woff2"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Oswald-Medium.woff2"><link rel="stylesheet" href="/css/arknights.css?v=mwyf9n9z"><style>@font-face {
+<meta name="twitter:card" content="summary"><link rel="canonical" href="https://georgemarx1024.github.io/"><link rel="icon" type="image/png" href="/img/babel.png"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.woff2"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Oswald-Medium.woff2"><link rel="stylesheet" href="/css/arknights.css?v=mwyo72v1"><style>@font-face {
   font-family: Bender;
   src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
 }
@@ -68,7 +68,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark')
  --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
  --light-background: url('/img/bk.jpg');
  --theme-encrypt-confirm: '确认'
-}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@11.12.2/dist/mermaid.esm.min.mjs';
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer src="https://vercount.one/js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@11.12.2/dist/mermaid.esm.min.mjs';
 window.mermaid = mermaid;
 code.paintMermaid();
 </script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
@@ -87,7 +87,11 @@ lightGallery(document.getElementById('post-bg'), {
    }
  }
 });
-document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+document.addEventListener("pjax:complete", reset);document.addEventListener('pjax:success', _ => {
+ const script = document.createElement('script');
+ script.src = 'https://vercount.one/js';
+ document.head.appendChild(script);
+});reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
 const postBg = document.querySelector('#post-bg');
 if (postBg) lightGallery(postBg, {
   plugins: [lgZoom,lgThumbnail],
@@ -104,7 +108,11 @@ if (postBg) lightGallery(postBg, {
    }
  }
 });
-document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 8.1.2"></head><body class="ak-home-page"><div class="ak-loading"><div class="ak-loading-deco" aria-hidden="true"><i class="ak-loading-line ak-loading-line-h"></i><i class="ak-loading-line ak-loading-line-v"></i></div><div class="ak-loading-logo"><img src="/img/title_logo.png" alt="巴别塔里的文字花圃"></div><div class="ak-loading-foot"><div class="ak-loading-copy"><span class="ak-loading-copyleft" aria-hidden="true">©</span><span class="ak-loading-owner">MOHISTMAN</span></div><div class="ak-loading-bar"><i class="ak-loading-bar-cap"></i><span class="ak-loading-bar-track"><i class="ak-loading-bar-fill"></i></span><i class="ak-loading-bar-cap"></i></div><div class="ak-loading-meta"><span class="ak-loading-num">LOADING - 0%</span><span class="ak-loading-url">https://georgemarx1024.github.io</span></div></div></div><script>(function () {
+document.addEventListener("pjax:complete", reset);document.addEventListener('pjax:success', _ => {
+ const script = document.createElement('script');
+ script.src = 'https://vercount.one/js';
+ document.head.appendChild(script);
+});reset()})</script><meta name="generator" content="Hexo 8.1.2"></head><body class="ak-home-page"><div class="ak-loading"><div class="ak-loading-deco" aria-hidden="true"><i class="ak-loading-line ak-loading-line-h"></i><i class="ak-loading-line ak-loading-line-v"></i></div><div class="ak-loading-logo"><img src="/img/title_logo.png" alt="巴别塔里的文字花圃"></div><div class="ak-loading-foot"><div class="ak-loading-copy"><span class="ak-loading-copyleft" aria-hidden="true">©</span><span class="ak-loading-owner">MOHISTMAN</span></div><div class="ak-loading-bar"><i class="ak-loading-bar-cap"></i><span class="ak-loading-bar-track"><i class="ak-loading-bar-fill"></i></span><i class="ak-loading-bar-cap"></i></div><div class="ak-loading-meta"><span class="ak-loading-num">LOADING - 0%</span><span class="ak-loading-url">https://georgemarx1024.github.io</span></div></div></div><script>(function () {
   var el = document.querySelector('.ak-loading');
   if (!el) return;
   // 非首次进入网站：不播放入场动画（CSS 也已隐藏，这里直接移除）
