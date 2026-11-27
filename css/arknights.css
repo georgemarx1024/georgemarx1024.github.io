@@ -3436,13 +3436,14 @@ body.ak-about-page article {
   flex: 0 0 auto;
   display: inline-flex;
   stroke: #898989;
+  transform: rotate(90deg);
   transition: stroke 0.2s, transform 0.3s ease;
 }
 .ak-arrow-line {
   transition: opacity 0.3s ease;
 }
 .ak-collapse[open] .ak-collapse-arrow {
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
 }
 .ak-collapse[open] .ak-arrow-line {
   opacity: 0;
